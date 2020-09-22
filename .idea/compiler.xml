@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="microservice-config-server" />
+        <module name="gateway-zuul" />
+        <module name="microservice-foo" />
+        <module name="consumer-movie-ribbon" />
+        <module name="provider-user-sleuth" />
+        <module name="consumer-movie" />
+        <module name="eureka-server" />
+        <module name="consumer-movie-feigh" />
+        <module name="provider-user" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="consumer-movie" target="11" />
+      <module name="consumer-movie-feigh" target="11" />
+      <module name="consumer-movie-ribbon" target="11" />
+      <module name="eureka-server" target="11" />
+      <module name="gateway-zuul" target="11" />
+      <module name="microservice-config-server" target="11" />
+      <module name="microservice-foo" target="11" />
+      <module name="provider-user" target="11" />
+      <module name="provider-user-sleuth" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="consumer-movie" options="-parameters" />
+      <module name="consumer-movie-feigh" options="-parameters" />
+      <module name="consumer-movie-ribbon" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="gateway-zuul" options="-parameters" />
+      <module name="microservice-config-server" options="-parameters" />
+      <module name="microservice-foo" options="-parameters" />
+      <module name="provider-user" options="-parameters" />
+      <module name="provider-user-sleuth" options="-parameters" />
+    </option>
+  </component>
+</project>

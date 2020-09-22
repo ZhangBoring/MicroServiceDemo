@@ -1,0 +1,14 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: microservice-config-server
+  cloud:
+    config:
+      server:
+        git:
+          # Git仓库地址
+          uri: https://github.com/ZhangBoring/ms-spring-cloud-config.git
+          username:
+          password:
+

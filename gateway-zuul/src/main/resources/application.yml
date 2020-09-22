@@ -1,0 +1,44 @@
+server:
+  port: 8050
+spring:
+  application:
+    name: microservice-gateway-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
+  instance:
+    prefer-ip-address: true
+zuul:
+  # 前缀
+  prefix: /api
+# start 同时指定path和url,并且不破坏zuul的hystrix和ribbon特性
+  routes:
+    user-route:   # 该名称可自定义
+      path: /user/**
+      service-id: microservice-provider-user # 效果同  microservice-provider-user: /user/**
+    movie-route:
+      path: /movie/**
+      service-Id: microservice-consumer-movie
+  # 忽略单独的路径,而不忽略整个服务,如下:忽略所有包含admin的路径
+  ignored-patterns: /**/admin/**
+ribbon:
+  eureka:
+    enabled: false
+microservice-provider-user:
+  ribbon:
+    listOfServers: localhost:8080,localhost:8081
+microservice-consumer-movie:
+  ribbon:
+    listOfServers: localhost:8070,localhost:8071
+# end
+
+# 指定别名
+#zuul:
+#  routes:
+#    microservice-provider-user: /user/**     # http://localhost:8050/user/user/1
+#    microservice-consumer-movie: /movie/**
+#  ignored-services: microservice-consumer-movie-feign  # 指定忽略的服务,可用"*"忽略所有
+logging:
+  level:
+    com.netflix: debug

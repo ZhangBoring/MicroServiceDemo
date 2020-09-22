@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/simple1/provider-user/pom.xml" />
+        <option value="$PROJECT_DIR$/provider-user/pom.xml" />
+        <option value="$PROJECT_DIR$/consumer-movie/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/consumer-movie-ribbon/consumer-movie-ribbon/pom.xml" />
+        <option value="$PROJECT_DIR$/consumer-movie-feigh/consumer-movie-feigh/pom.xml" />
+        <option value="$PROJECT_DIR$/gateway-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice-config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice-foo/pom.xml" />
+        <option value="$PROJECT_DIR$/provider-user-sleuth/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="oracle-jdk11.0.7" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

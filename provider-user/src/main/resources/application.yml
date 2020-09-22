@@ -1,0 +1,49 @@
+server:
+  port: 8080
+spring:
+  jpa:
+    show-sql: true
+  application:
+    name: microservice-provider-user
+  profiles: 8080
+logging:
+  level:
+    root: info
+    org.hibernate: info
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+management:
+  endpoint:
+    health:
+      show-details: always
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer2:8762/eureka/,http://peer1:8761/eureka/
+  instance:
+    prefer-ip-address: true
+---
+server:
+  port: 8081
+spring:
+  jpa:
+    show-sql: true
+  application:
+    name: microservice-provider-user
+  profiles: 8081
+logging:
+  level:
+    root: info
+    org.hibernate: info
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+management:
+  endpoint:
+    health:
+      show-details: always
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer2:8762/eureka/,http://peer1:8761/eureka/
+  instance:
+    prefer-ip-address: true

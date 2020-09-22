@@ -1,0 +1,22 @@
+server:
+  port: 8070
+eureka:
+  instance:
+    # 是否注册IP到eureka server，如不指定或设为false，那就会注册主机名到eureka server
+    prefer-ip-address: true
+  client:
+    # 指定eureka server通信地址，注意/eureka/小尾巴不能少
+    service-url:
+      defaultZone: http://peer2:8762/eureka/,http://peer1:8761/eureka/
+spring:
+  application:
+    name: microservice-consumer-movie
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        # hystrix.stream 被@HystrixCommand注解了的方法被调用时，就会产生监控信息，并暴露到该端点中。
+        include: "health,info,hystrix.stream"

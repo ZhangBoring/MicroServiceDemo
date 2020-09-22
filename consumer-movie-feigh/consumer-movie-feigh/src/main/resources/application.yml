@@ -1,0 +1,37 @@
+server:
+  port: 8072
+eureka:
+  instance:
+    # 是否注册IP到eureka server，如不指定或设为false，那就会注册主机名到eureka server
+    prefer-ip-address: true
+  client:
+    # 指定eureka server通信地址，注意/eureka/小尾巴不能少
+    service-url:
+      defaultZone: http://peer2:8762/eureka/,http://peer1:8761/eureka/
+spring:
+  application:
+    name: microservice-consumer-movie-feign
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "health,hystrix.stream"
+logging:
+  level:
+    com.boring.cloud.consumermovie.client.UserFeighClient: debug
+feign:
+  client:
+    config:
+      microservice-provider-user:
+        connectTimeout: 5000
+        readTimeout: 8000
+        loggerLevel: full
+  hystrix:
+    enabled: false
+turbine:
+  # 要监控的微服务列表，多个用,分隔
+  app-config: microservice-consumer-movie,microservice-consumer-movie-feign
+  cluster-name-expression: "'default'"

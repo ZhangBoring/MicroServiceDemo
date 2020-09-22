@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: microservice-foo
+  cloud:
+    config:
+      # 配置中心地址
+      uri: http://localhost:8000/
+      profile: dev
+      # git分支
+      label: master

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/consumer-movie/consumer-movie.iml" filepath="$PROJECT_DIR$/consumer-movie/consumer-movie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/consumer-movie-feigh/consumer-movie-feigh/consumer-movie-feigh.iml" filepath="$PROJECT_DIR$/consumer-movie-feigh/consumer-movie-feigh/consumer-movie-feigh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/consumer-movie-ribbon/consumer-movie-ribbon/consumer-movie-ribbon.iml" filepath="$PROJECT_DIR$/consumer-movie-ribbon/consumer-movie-ribbon/consumer-movie-ribbon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway-zuul/gateway-zuul.iml" filepath="$PROJECT_DIR$/gateway-zuul/gateway-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-config-server/microservice-config-server.iml" filepath="$PROJECT_DIR$/microservice-config-server/microservice-config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-foo/microservice-foo.iml" filepath="$PROJECT_DIR$/microservice-foo/microservice-foo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/provider-user/provider-user.iml" filepath="$PROJECT_DIR$/provider-user/provider-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/provider-user-sleuth/provider-user-sleuth.iml" filepath="$PROJECT_DIR$/provider-user-sleuth/provider-user-sleuth.iml" />
+    </modules>
+  </component>
+</project>

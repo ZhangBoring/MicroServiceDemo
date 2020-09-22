@@ -1,0 +1,30 @@
+server:
+  port: 8082
+spring:
+  jpa:
+    show-sql: true
+  application:
+    name: microservice-provider-user-sleuth
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      # 采样率，默认0.1，也就是10%，为了便于观察效果，改为1.0，也就是100%。生产环境建议保持默认。
+      probability: 1.0
+logging:
+  level:
+    root: info
+    org.hibernate: info
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    org.springframework.cloud.sleuth: DEBUG
+management:
+  endpoint:
+    health:
+      show-details: always
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer2:8762/eureka/,http://peer1:8761/eureka/
+  instance:
+    prefer-ip-address: true
