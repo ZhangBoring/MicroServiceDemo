@@ -8,7 +8,7 @@ spring:
       server:
         git:
           # Git仓库地址
-          uri: https://github.com/ZhangBoring/ms-spring-cloud-config.git
+          uri: https://github.com/ZhangBoring/ms-spring-cloud-config
           username:
           password:
 
